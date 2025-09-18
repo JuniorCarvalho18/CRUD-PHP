@@ -25,38 +25,30 @@ if (isset($_POST['salvar'])) {
         
         $sql = "UPDATE alunos SET nome=?, email=?, curso=?, senha=? WHERE id=?";
         $stmt = mysqli_prepare($con, $sql);
-        // "ssssi" -> 4 strings (nome, email, curso, senha) e 1 inteiro (id)
         mysqli_stmt_bind_param($stmt, "ssssi", $nome, $email, $curso, $senha, $id);
 
     } else { // Se o campo de senha estiver vazio, atualiza sem mexer na senha
         
         $sql = "UPDATE alunos SET nome=?, email=?, curso=? WHERE id=?";
         $stmt = mysqli_prepare($con, $sql);
-        // "sssi" -> 3 strings (nome, email, curso) e 1 inteiro (id)
         mysqli_stmt_bind_param($stmt, "sssi", $nome, $email, $curso, $id);
     }
     
     // Executa a consulta de atualização
     if (mysqli_stmt_execute($stmt)) {
-        // Redireciona para a lista de alunos após a atualização
         header("Location: alunos.php?status=editado");
         exit();
     } else {
-        echo "Erro ao atualizar o aluno.";
+        $erro = "Erro ao atualizar o aluno.";
     }
 }
 
 // --- PARTE 2: LÓGICA PARA BUSCAR OS DADOS DO ALUNO E MOSTRAR NO FORMULÁRIO ---
-
 $sql_select = "SELECT * FROM alunos WHERE id = ?";
 $stmt_select = mysqli_prepare($con, $sql_select);
-
-// "i" -> 1 inteiro (id)
 mysqli_stmt_bind_param($stmt_select, "i", $id);
 mysqli_stmt_execute($stmt_select);
-
 $result = mysqli_stmt_get_result($stmt_select);
-// mysqli_fetch_assoc() pega apenas uma linha de resultado
 $aluno = mysqli_fetch_assoc($result);
 
 // Se nenhum aluno for encontrado com esse ID, volta para a lista
@@ -64,14 +56,33 @@ if (!$aluno) {
     header("Location: alunos.php");
     exit;
 }
-
 ?>
-<form method="post">
-  <h3>Editar Aluno</h3>
-  Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($aluno['nome']); ?>"><br><br>
-  Email: <input type="email" name="email" value="<?php echo htmlspecialchars($aluno['email']); ?>"><br><br>
-  Curso: <input type="text" name="curso" value="<?php echo htmlspecialchars($aluno['curso']); ?>"><br><br>
-  Nova senha (deixe em branco para não alterar): <input type="password" name="senha"><br><br>
-  <button type="submit" name="salvar">Salvar Alterações</button>
-</form>
-<a href="alunos.php">Voltar</a>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Aluno</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    
+</head>
+<body>
+    <form method="post">
+      <h3>Editar Aluno</h3>
+      Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($aluno['nome']); ?>" required><br><br>
+      Email: <input type="email" name="email" value="<?php echo htmlspecialchars($aluno['email']); ?>" required><br><br>
+      Curso: <input type="text" name="curso" value="<?php echo htmlspecialchars($aluno['curso']); ?>" required><br><br>
+      Nova senha (deixe em branco para não alterar): <input type="password" name="senha"><br><br>
+      <button type="submit" name="salvar">Salvar Alterações</button>
+    </form>
+
+    <?php
+    if (isset($erro)) {
+        echo "<p>" . htmlspecialchars($erro) . "</p>";
+    }
+    ?>
+
+    <a href="alunos.php">Voltar</a>
+</body>
+</html>

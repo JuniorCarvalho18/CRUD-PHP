@@ -1,18 +1,4 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
-body {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #4a90e2, #7b4397);
-}
 
 /* Container do formulário */
 .cadastro-aluno-container {
@@ -78,11 +64,6 @@ body {
   color: #666;
 }
 
-.cadastro-aluno-container p a {
-  color: #4a90e2;
-  font-weight: 600;
-  text-decoration: none;
-}
 
 .cadastro-aluno-container p a:hover {
   text-decoration: underline;

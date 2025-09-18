@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 <h2>Sistema Escolar - Login</h2>

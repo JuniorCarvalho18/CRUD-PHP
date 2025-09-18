@@ -1,19 +1,4 @@
-/* Reset e base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
 
-body {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #4a90e2, #7b4397);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
 
 /* Container principal */
 .relatorio-container {
@@ -65,12 +50,7 @@ body {
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
-  transition: background 0.3s, transform 0.2s;
-}
-
-.relatorio-container a:hover {
-  background: #7b4397;
-  transform: scale(1.05);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 /* Animação */
