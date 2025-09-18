@@ -70,10 +70,10 @@ if (!$aluno) {
 <body>
     <form method="post">
       <h3>Editar Aluno</h3>
-      Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($aluno['nome']); ?>" required><br><br>
-      Email: <input type="email" name="email" value="<?php echo htmlspecialchars($aluno['email']); ?>" required><br><br>
-      Curso: <input type="text" name="curso" value="<?php echo htmlspecialchars($aluno['curso']); ?>" required><br><br>
-      Nova senha (deixe em branco para não alterar): <input type="password" name="senha"><br><br>
+      Nome: <input type="text" name="nome" value="<?php echo htmlspecialchars($aluno['nome']); ?>" required>
+      Email: <input type="email" name="email" value="<?php echo htmlspecialchars($aluno['email']); ?>" required>
+      Curso: <input type="text" name="curso" value="<?php echo htmlspecialchars($aluno['curso']); ?>" required>
+      Nova senha (deixe em branco para não alterar): <input type="password" name="senha">
       <button type="submit" name="salvar">Salvar Alterações</button>
     </form>
 

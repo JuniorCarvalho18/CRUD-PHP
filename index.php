@@ -15,14 +15,16 @@
 <?php endif; ?>
 
 <form method="post" action="src/login.php">
-    <label>Email:</label><br>
-    <input type="email" name="email" required><br><br>
+    <label>Email:</label>
+    <input type="email" name="email" required>
 
-    <label>Senha:</label><br>
-    <input type="password" name="senha" required><br><br>
+    <label>Senha:</label>
+    <input type="password" name="senha" required>
 
-    <button type="submit">Entrar</button>
-    <a href="pages/cadastro.php">Cadastrar</a>
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px;">
+        <button type="submit">Entrar</button>
+        <a href="pages/cadastro.php">Cadastrar</a>
+    </div>
 </form>
 </body>
 </html>

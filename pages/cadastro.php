@@ -36,10 +36,10 @@ if(isset($_POST['cadastrar'])){
 <body>
     <form method="POST">
         <h3>Cadastrar Usuário</h3>
-        Nome: <input type="text" name="nome" required><br><br>
-        Sobrenome: <input type="text" name="sobrenome" required><br><br>
-        Email: <input type="email" name="email" required><br><br>
-        Senha: <input type="password" name="senha" required><br><br>
+        Nome: <input type="text" name="nome" required>
+        Sobrenome: <input type="text" name="sobrenome" required>
+        Email: <input type="email" name="email" required>
+        Senha: <input type="password" name="senha" required>
         <button type="submit" name="cadastrar">Cadastrar</button>
     </form>
 

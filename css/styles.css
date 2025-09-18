@@ -15,6 +15,7 @@ body {
   align-items: center;
   flex-direction: column;
   background: linear-gradient(135deg, #4a90e2, #7b4397);
+  gap: 10px;
 }
 
 a {
@@ -24,9 +25,20 @@ a {
 }
 
 a:hover {
+  padding: 5px;
+  border-radius: 2px;
   background-color: #7b4397;
   transform: scale(1.05);
 }
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
 
 /* Importando os módulos de estilo */
 @import url('cadastro.css');
