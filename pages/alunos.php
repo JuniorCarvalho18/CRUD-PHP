@@ -1,11 +1,42 @@
 <?php
+// Adicionado para vermos qualquer erro que possa surgir
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 include '../src/sessao.php';
-include '../src/conexao.php';
+include '../src/conexao.php'; // Este arquivo cria a variável $con
+
+// A variável de conexão agora é $con, que vem do conexao.php
+if (!$con) {
+    die("A conexão com o banco de dados falhou.");
+}
 
 $busca = $_GET['busca'] ?? '';
-$stmt = $pdo->prepare("SELECT * FROM alunos WHERE nome LIKE ? OR curso LIKE ? ORDER BY nome");
-$stmt->execute(["%$busca%", "%$busca%"]);
-$alunos = $stmt->fetchAll();
+
+// --- SEÇÃO DE CÓDIGO ALTERADA DE PDO PARA MYSQLI ---
+
+// 1. A consulta SQL é a mesma, mas a preparamos com a função do MySQLi
+$sql = "SELECT * FROM alunos WHERE nome LIKE ? OR curso LIKE ? ORDER BY nome";
+$stmt = mysqli_prepare($con, $sql);
+
+// 2. Criamos a variável para o LIKE do MySQLi (precisa ser feito separadamente)
+$busca_param = "%{$busca}%";
+
+// 3. Ligamos os parâmetros ao statement ("ss" significa duas variáveis do tipo string)
+mysqli_stmt_bind_param($stmt, "ss", $busca_param, $busca_param);
+
+// 4. Executamos o statement
+mysqli_stmt_execute($stmt);
+
+// 5. Pegamos os resultados da consulta
+$result = mysqli_stmt_get_result($stmt);
+
+// 6. Buscamos todos os resultados em um array associativo
+$alunos = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+// --- FIM DA SEÇÃO ALTERADA ---
+
 ?>
 <style>
   table, th, td {
