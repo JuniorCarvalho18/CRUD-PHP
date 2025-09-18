@@ -1,0 +1,144 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #f4f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* Container */
+.alunos-container {
+  background: #fff;
+  width: 100%;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+.alunos-container h2 {
+  font-size: 2rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Tabela */
+.alunos-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.alunos-table thead {
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+  color: #fff;
+}
+
+.alunos-table th, 
+.alunos-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.alunos-table tbody tr {
+  background: #fff;
+  transition: background 0.3s ease;
+}
+
+.alunos-table tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.alunos-table tbody tr:hover {
+  background: #eef6ff;
+}
+
+/* Botões de ação */
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.btn-editar {
+  background: #2d9cdb;
+  color: #fff;
+}
+
+.btn-editar:hover {
+  background: #2274a5;
+  transform: scale(1.05);
+}
+
+.btn-excluir {
+  background: #e63946;
+  color: #fff;
+  margin-left: 8px;
+}
+
+.btn-excluir:hover {
+  background: #c1121f;
+  transform: scale(1.05);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .alunos-table thead {
+    display: none; /* Esconde cabeçalho no mobile */
+  }
+
+  .alunos-table, 
+  .alunos-table tbody, 
+  .alunos-table tr, 
+  .alunos-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .alunos-table tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 10px;
+  }
+
+  .alunos-table td {
+    text-align: right;
+    padding: 10px;
+    position: relative;
+  }
+
+  .alunos-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 600;
+    color: #4a90e2;
+    text-transform: capitalize;
+  }
+}

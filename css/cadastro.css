@@ -1,0 +1,65 @@
+.cadastro-container {
+  background: #fff;
+  padding: 40px 30px;
+  width: 380px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.cadastro-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #4a90e2;
+}
+
+.cadastro-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.cadastro-container input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
+}
+
+.cadastro-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cadastro-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7b4397, #4a90e2);
+}
+
+.cadastro-container p {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cadastro-container p a {
+  color: #4a90e2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.cadastro-container p a:hover {
+  text-decoration: underline;
+}

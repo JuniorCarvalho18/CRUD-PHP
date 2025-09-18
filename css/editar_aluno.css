@@ -1,0 +1,61 @@
+.editar-container {
+  background: #fff;
+  padding: 40px 30px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+.editar-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #2d9cdb; /* azul destaque */
+}
+
+.editar-container input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.editar-container input:focus {
+  border-color: #2d9cdb;
+  box-shadow: 0 0 8px rgba(45,156,219,0.5);
+}
+
+.editar-container button {
+  width: 48%;
+  padding: 12px;
+  margin: 15px 1%;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.editar-container .btn-salvar {
+  background: #2d9cdb;
+  color: #fff;
+}
+
+.editar-container .btn-salvar:hover {
+  background: #2274a5;
+  transform: scale(1.05);
+}
+
+.editar-container .btn-cancelar {
+  background: #ccc;
+  color: #333;
+}
+
+.editar-container .btn-cancelar:hover {
+  background: #aaa;
+  transform: scale(1.05);
+}

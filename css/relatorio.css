@@ -1,0 +1,91 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.relatorio-container {
+  background: #fff;
+  padding: 40px;
+  width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+.relatorio-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: #4a90e2;
+}
+
+/* Card de quantidade */
+.relatorio-card {
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.relatorio-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.relatorio-card p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Botão voltar */
+.relatorio-container a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.relatorio-container a:hover {
+  background: #7b4397;
+  transform: scale(1.05);
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+  .relatorio-container {
+    width: 95%;
+    padding: 25px;
+  }
+  .relatorio-card p {
+    font-size: 2rem;
+  }
+}

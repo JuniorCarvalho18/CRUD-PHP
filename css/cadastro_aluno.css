@@ -1,0 +1,107 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+}
+
+/* Container do formulário */
+.cadastro-aluno-container {
+  background: #fff;
+  padding: 40px 30px;
+  width: 420px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+.cadastro-aluno-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #4a90e2;
+}
+
+/* Inputs */
+.cadastro-aluno-container input,
+.cadastro-aluno-container select {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.cadastro-aluno-container input:focus,
+.cadastro-aluno-container select:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74,144,226,0.4);
+}
+
+/* Botão */
+.cadastro-aluno-container button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  background: linear-gradient(135deg, #4a90e2, #7b4397);
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.cadastro-aluno-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7b4397, #4a90e2);
+}
+
+/* Rodapé (ex: link para login) */
+.cadastro-aluno-container p {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cadastro-aluno-container p a {
+  color: #4a90e2;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cadastro-aluno-container p a:hover {
+  text-decoration: underline;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+  .cadastro-aluno-container {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .cadastro-aluno-container h2 {
+    font-size: 1.5rem;
+  }
+}
