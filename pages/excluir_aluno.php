@@ -3,8 +3,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-include '/sessao.php';
-include '/conexao.php'; // Este arquivo nos dá a variável $con
+include '../src/sessao.php';
+include '../src//conexao.php'; // Este arquivo nos dá a variável $con
 
 // Pega o ID da URL de forma segura, garantindo que seja um número inteiro
 $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
@@ -25,6 +25,6 @@ if ($id) {
 }
 
 // Redireciona o usuário de volta para a lista de alunos
-header("Location: ../pages/alunos.php");
+header("Location: /alunos.php");
 exit(); // É uma boa prática adicionar exit() após um redirecionamento
 ?>

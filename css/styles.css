@@ -19,7 +19,7 @@ body {
 }
 
 a {
-  color: #4a90e2;
+  color: #9dc4f0;
   font-weight: 600;
   text-decoration: none;
 }
@@ -40,6 +40,35 @@ table, th, td {
     text-align: left;
   }
 
+form {
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  min-width: 400px;
+  width: min-content;
+  max-width: 800px;
+  animation: fadeIn 0.8s ease;
+}
+
+input{
+  width: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button {
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
 /* Importando os módulos de estilo */
 @import url('cadastro.css');
 @import url('alunos.css');

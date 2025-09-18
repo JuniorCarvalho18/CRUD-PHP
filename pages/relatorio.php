@@ -32,8 +32,8 @@ $resultado_cursos = mysqli_query($con, $sql_cursos);
 </head>
 <body>
     <h3>Relatório</h3>
+    <form>
     <p>Total de alunos: <?php echo $total; ?></p>
-    
     <table>
         <tr>
             <th>Curso</th>
@@ -60,7 +60,7 @@ $resultado_cursos = mysqli_query($con, $sql_cursos);
         endif;
         ?>
     </table>
-    
+    </form>
     <a href="dashboard.php">Voltar</a>
 </body>
 </html>

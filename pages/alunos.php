@@ -39,7 +39,7 @@ $alunos = mysqli_fetch_all($result, MYSQLI_ASSOC);
     <form method="get">
       Buscar: <input type="text" name="busca" value="<?php echo htmlspecialchars($busca); ?>">
       <button type="submit">Pesquisar</button>
-    </form>
+    
     <table>
       <tr><th>Nome</th><th>Email</th><th>Curso</th><th>Ações</th></tr>
       <?php if (count($alunos) > 0): ?>
@@ -60,6 +60,8 @@ $alunos = mysqli_fetch_all($result, MYSQLI_ASSOC);
         </tr>
       <?php endif; ?>
     </table>
+    </form>
+    
     <a href="dashboard.php">Voltar</a>
 </body>
 </html>

@@ -14,7 +14,7 @@
     <p style="color:red"><?= $_SESSION['erro']; unset($_SESSION['erro']); ?></p>
 <?php endif; ?>
 
-<form method="post" action="src/login.php">
+<form method="post" action="src/login.php" style="width: 400px;">
     <label>Email:</label>
     <input type="email" name="email" required>
 
