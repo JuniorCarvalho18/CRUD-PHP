@@ -1,5 +1,5 @@
 Integrantes:
-Laércio Cavalcante
-Jackeline
-Adriel Miguel
-Pedro Henrique
+Laércio Cavalcante  
+Jackeline  
+Adriel Miguel  
+Pedro Henrique  
