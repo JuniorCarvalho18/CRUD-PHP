@@ -1,5 +1,5 @@
-Integrantes:
-Laércio Cavalcante  
-Jackeline  
-Adriel Miguel  
-Pedro Henrique  
+Integrantes:  
+- Laércio Cavalcante  
+- Jackeline Queiroz  
+- Adriel Miguel  
+- Pedro Henrique  
